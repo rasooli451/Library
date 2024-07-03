@@ -104,5 +104,5 @@ form .close{
 
 
 .hidden{
-    visibility: hidden;
+    display: none;
 }
