@@ -15,7 +15,7 @@ const Author = form.elements["Author"];
 
 const number = form.elements["NumberOfPages"];
 
-let index = 0;
+
 
 function Book(Name, author, numofpages, Read){
     this.Name = Name;
@@ -74,15 +74,12 @@ submit.addEventListener("click", (event)=>{
         card.append(Read);
         container.append(card);
         card.style.cssText = "background-color : #fff; color : #000; padding : 15px; display : flex; flex-direction : column; border-radius : 10px;"
-        remve.setAttribute("data-index", index);
-        Read.setAttribute("data-index", index);
         remve.addEventListener("click", (e)=>{
             Remove(e);
         });
         Read.addEventListener("click", (e)=>{
             read(e);
         })
-        index ++;
     }
 })
 
@@ -104,7 +101,6 @@ function Remove(event){
     let toberemoved = container.childNodes[ind];
     container.removeChild(toberemoved);
     myLibrary.splice(ind, 1);
-    index --;
 }
 
 
